@@ -3,181 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منطقة القصيم - مدن القصيم</title>
-    <link rel="stylesheet" href="qassim.css">
+    <title>مناطق المملكة العربية السعودية</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header -->
     <header class="site-header">
-        <div class="header-content">
-            <a href="index.html" class="back-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-                العودة للرئيسية
-            </a>
-            <div class="logo-text">
-                <h1>منطقة القصيم</h1>
+        <div class="header-overlay">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" stroke="#c8a96e" stroke-width="2"/>
+                            <path d="M15 30 Q22 20 30 25 Q38 30 45 20" stroke="#c8a96e" stroke-width="2" fill="none"/>
+                            <path d="M15 38 Q22 28 30 33 Q38 38 45 28" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>مناطق المملكة</h1>
+                        <span>المملكة العربية السعودية</span>
+                    </div>
+                </div>
+                <nav class="main-nav">
+                    <a href="#regions">المناطق</a>
+                    <a href="#about">عن الموقع</a>
+                </nav>
             </div>
-            <div class="header-spacer"></div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="region-hero">
-        <div class="hero-bg">
-            <img src="qassim.jpg" alt="منطقة القصيم">
-            <div class="hero-overlay"></div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <div class="breadcrumb">
-                <a href="index.html">الرئيسية</a>
-                <span>/</span>
-                <span>منطقة القصيم</span>
-            </div>
-            <h2>منطقة القصيم</h2>
-            <p>أرض الخيرات ومنبع التراث العريق في قلب الجزيرة العربية</p>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="num">4</span>
-                    <span class="label">مدن رئيسية</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="num">58,046</span>
-                    <span class="label">كم² المساحة</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="num">1.4M+</span>
-                    <span class="label">نسمة</span>
-                </div>
-            </div>
+            <div class="hero-badge">اكتشف المملكة</div>
+            <h2 class="hero-title">استكشف مناطق<br><span class="highlight">المملكة العربية السعودية</span></h2>
+            <p class="hero-subtitle">رحلة عبر التاريخ والحضارة والطبيعة في قلب الجزيرة العربية</p>
+            <a href="#regions" class="hero-btn">ابدأ الاستكشاف</a>
+        </div>
+        <div class="hero-scroll">
+            <span>اسحب للأسفل</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <!-- About Region -->
-    <section class="about-region">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <span class="tag">نبذة عن المنطقة</span>
-                    <h3>القصيم.. قلب المملكة النابض</h3>
-                    <p>تقع منطقة القصيم في وسط المملكة العربية السعودية، وتُعدّ من أكثر المناطق إنتاجاً للتمور على مستوى العالم. تتميز بتضاريسها المتنوعة بين الأودية والسهول والجبال، وتزخر بالمواقع التاريخية والأثرية التي تشهد على حضارات عريقة.</p>
-                    <p>تشتهر المنطقة بأسواقها التجارية الكبيرة، وعلى رأسها سوق الجمعة الشهير في بريدة، كما تُعدّ مركزاً تعليمياً وثقافياً بارزاً في المملكة.</p>
-                </div>
-                <div class="about-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">🌴</div>
-                        <div>
-                            <h4>التمور الفاخرة</h4>
-                            <p>أكبر منطقة منتجة للتمور في العالم</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🏛️</div>
-                        <div>
-                            <h4>التراث التاريخي</h4>
-                            <p>مواقع أثرية وتاريخية متعددة</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🎓</div>
-                        <div>
-                            <h4>المركز التعليمي</h4>
-                            <p>جامعات ومعاهد علمية متميزة</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">🛒</div>
-                        <div>
-                            <h4>التجارة والأسواق</h4>
-                            <p>أسواق تجارية وتراثية شهيرة</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cities Section -->
-    <section class="cities-section">
+    <!-- Regions Section -->
+    <section class="regions-section" id="regions">
         <div class="container">
             <div class="section-header">
-                <span class="tag">مدن المنطقة</span>
-                <h3>اختر مدينتك</h3>
-                <p>استكشف مدن منطقة القصيم وتعرف على تاريخها ومعالمها</p>
+                <span class="section-tag">المناطق الجغرافية</span>
+                <h2>اختر منطقتك</h2>
+                <p>اكتشف جمال وتاريخ مناطق المملكة العربية السعودية</p>
             </div>
-            <div class="cities-grid">
 
-                <!-- بريدة -->
-                <a href="buraidah.html" class="city-card">
-                    <div class="city-img-wrap">
-                        <img src="buraidah.jpg" alt="بريدة">
-                        <div class="city-overlay"></div>
-                        <div class="city-num">01</div>
-                    </div>
-                    <div class="city-info">
-                        <h4>بريدة</h4>
-                        <p>عاصمة منطقة القصيم وأكبر مدنها، تشتهر ببرج الماء الشهير وسوق الجمعة</p>
-                        <span class="explore-link">استكشف المدينة ←</span>
-                    </div>
-                </a>
+            <div class="regions-grid">
 
-                <!-- عنيزة -->
-                <a href="unaizah.html" class="city-card">
-                    <div class="city-img-wrap">
-                        <img src="unaizah.jpg" alt="عنيزة">
-                        <div class="city-overlay"></div>
-                        <div class="city-num">02</div>
+                <!-- القصيم -->
+                <div class="region-card" id="qassim-card">
+                    <div class="card-image-wrapper">
+                        <img src="images/qassim.jpg" alt="منطقة القصيم" class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="region-badge">منطقة القصيم</div>
                     </div>
-                    <div class="city-info">
-                        <h4>عنيزة</h4>
-                        <p>تُلقّب بـ"عروس القصيم" وتشتهر بتراثها المعماري الأصيل وتمورها الفاخرة</p>
-                        <span class="explore-link">استكشف المدينة ←</span>
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5 L35 15 L35 35 L5 35 L5 15 Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                                <path d="M15 35 L15 25 L25 25 L25 35" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                                <circle cx="20" cy="18" r="3" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>منطقة القصيم</h3>
+                        <p>تُعدّ منطقة القصيم من أبرز مناطق المملكة العربية السعودية، وتشتهر بتمورها الفاخرة وتراثها العريق وحضارتها الأصيلة.</p>
+                        <div class="cities-preview">
+                            <span class="city-tag">بريدة</span>
+                            <span class="city-tag">عنيزة</span>
+                            <span class="city-tag">الرس</span>
+                            <span class="city-tag">المذنب</span>
+                        </div>
+                        <a href="qassim/index.html" class="card-btn">
+                            استكشف القصيم
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 5l-7 7 7 7"/>
+                            </svg>
+                        </a>
                     </div>
-                </a>
+                </div>
 
-                <!-- الرس -->
-                <a href="alrass.html" class="city-card">
-                    <div class="city-img-wrap">
-                        <img src="alrass.jpg" alt="الرس">
-                        <div class="city-overlay"></div>
-                        <div class="city-num">03</div>
+                <!-- نجران -->
+                <div class="region-card" id="najran-card">
+                    <div class="card-image-wrapper">
+                        <img src="images/najran_region.jpg" alt="منطقة نجران" class="card-image">
+                        <div class="card-overlay"></div>
+                        <div class="region-badge">منطقة نجران</div>
                     </div>
-                    <div class="city-info">
-                        <h4>الرس</h4>
-                        <p>محافظة تاريخية تحتضن معالم أثرية نادرة وتشتهر بموقعها الاستراتيجي</p>
-                        <span class="explore-link">استكشف المدينة ←</span>
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5 L35 15 L35 35 L5 35 L5 15 Z" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                                <path d="M15 35 L15 25 L25 25 L25 35" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                                <circle cx="20" cy="18" r="3" stroke="#c8a96e" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>منطقة نجران</h3>
+                        <p>تتميز منطقة نجران بموقعها الاستراتيجي جنوب المملكة، وتزخر بالمواقع الأثرية والتاريخية والطبيعة الخلابة.</p>
+                        <div class="cities-preview">
+                            <span class="city-tag">نجران</span>
+                            <span class="city-tag">شرورة</span>
+                        </div>
+                        <a href="najran/index.html" class="card-btn">
+                            استكشف نجران
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 5l-7 7 7 7"/>
+                            </svg>
+                        </a>
                     </div>
-                </a>
+                </div>
 
-                <!-- المذنب -->
-                <a href="almithnab.html" class="city-card">
-                    <div class="city-img-wrap">
-                        <img src="almithnab.jpg" alt="المذنب">
-                        <div class="city-overlay"></div>
-                        <div class="city-num">04</div>
-                    </div>
-                    <div class="city-info">
-                        <h4>المذنب</h4>
-                        <p>تتميز بطبيعتها الخلابة وواحاتها الخضراء وتراثها الشعبي الأصيل</p>
-                        <span class="explore-link">استكشف المدينة ←</span>
-                    </div>
-                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">عن الموقع</span>
+                    <h2>دليلك الشامل لمناطق المملكة</h2>
+                    <p>يهدف هذا الموقع إلى تقديم معلومات شاملة ودقيقة عن مناطق المملكة العربية السعودية ومدنها، من خلال استعراض أبرز معالمها الجغرافية والتاريخية والثقافية.</p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-num">2</span>
+                            <span class="stat-label">منطقة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">6</span>
+                            <span class="stat-label">مدينة</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">∞</span>
+                            <span class="stat-label">معلومة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/buraidah.jpg" alt="المملكة العربية السعودية">
+                    <div class="image-frame"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="site-footer">
         <div class="container">
-            <p>منطقة القصيم &mdash; المملكة العربية السعودية</p>
-            <a href="index.html">العودة للصفحة الرئيسية</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>مناطق المملكة</h3>
+                    <p>دليلك الشامل لاستكشاف مناطق المملكة العربية السعودية</p>
+                </div>
+                <div class="footer-links">
+                    <h4>المناطق</h4>
+                    <ul>
+                        <li><a href="qassim/index.html">منطقة القصيم</a></li>
+                        <li><a href="najran/index.html">منطقة نجران</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>مدن القصيم</h4>
+                    <ul>
+                        <li><a href="qassim/buraidah.html">بريدة</a></li>
+                        <li><a href="qassim/unaizah.html">عنيزة</a></li>
+                        <li><a href="qassim/alrass.html">الرس</a></li>
+                        <li><a href="qassim/almithnab.html">المذنب</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>مدن نجران</h4>
+                    <ul>
+                        <li><a href="najran/najran-city.html">نجران</a></li>
+                        <li><a href="najran/sharurah.html">شرورة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 - مناطق المملكة العربية السعودية</p>
+            </div>
         </div>
     </footer>
 
-    <script src="qassim.js"></script>
 </body>
 </html>
