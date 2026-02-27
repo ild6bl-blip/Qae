@@ -1,0 +1,123 @@
+/* ===== CSS خاص بمدينة بريدة ===== */
+
+/* لون مميز لبريدة - ذهبي دافئ */
+:root {
+    --city-color: #c8a96e;
+    --city-color-light: #e8c98e;
+    --city-color-dark: #a07840;
+    --city-gradient: linear-gradient(135deg, #c8a96e 0%, #a07840 100%);
+}
+
+/* تخصيص الهيدر */
+.site-header {
+    border-bottom-color: rgba(200, 169, 110, 0.2);
+}
+
+/* تخصيص الهيرو */
+.city-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--city-gradient);
+}
+
+/* صندوق التمييز */
+.highlight-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(200, 169, 110, 0.06);
+    border: 1px solid rgba(200, 169, 110, 0.2);
+    border-right: 4px solid var(--city-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 28px;
+}
+
+.highlight-icon {
+    font-size: 2.4rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.highlight-box h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--city-color);
+    margin-bottom: 8px;
+}
+
+.highlight-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* تخصيص بطاقات المعالم */
+.landmark-card:hover {
+    background: rgba(200, 169, 110, 0.05);
+    border-color: rgba(200, 169, 110, 0.3);
+}
+
+/* شريط الإحصائيات */
+.city-stats-bar {
+    background: var(--dark-3);
+    border-top: 1px solid rgba(200, 169, 110, 0.1);
+    border-bottom: 1px solid rgba(200, 169, 110, 0.1);
+    padding: 32px 0;
+    margin: 0;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-block {
+    text-align: center;
+}
+
+.stat-block .big-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--city-color);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-block .stat-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* تأثير الدخول */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.city-hero-content {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.city-hero-content h2 {
+    animation: fadeInUp 0.8s ease 0.1s both;
+}
+
+.city-hero-content .subtitle {
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.city-tags {
+    animation: fadeInUp 0.8s ease 0.3s both;
+}

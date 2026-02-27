@@ -1,0 +1,58 @@
+/* ===== CSS خاص بمدينة شرورة ===== */
+
+/* لون مميز لشرورة - رملي ذهبي */
+:root {
+    --city-color: #d4a04a;
+    --city-gradient: linear-gradient(135deg, #d4a04a 0%, #b07828 100%);
+}
+
+/* شريط ملون أسفل الهيرو */
+.city-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--city-gradient);
+}
+
+/* تخصيص الوسوم */
+.city-tag-item {
+    background: rgba(212, 160, 74, 0.12) !important;
+    border-color: rgba(212, 160, 74, 0.3) !important;
+    color: var(--city-color) !important;
+}
+
+/* تخصيص صندوق التمييز */
+.highlight-box {
+    border-right-color: var(--city-color) !important;
+    background: rgba(212, 160, 74, 0.06) !important;
+    border-color: rgba(212, 160, 74, 0.2) !important;
+}
+
+.highlight-box h4 {
+    color: var(--city-color) !important;
+}
+
+/* تخصيص بطاقات المعالم */
+.landmark-card:hover {
+    background: rgba(212, 160, 74, 0.05) !important;
+    border-color: rgba(212, 160, 74, 0.3) !important;
+}
+
+/* تأثير الرمال المتحركة في الخلفية */
+.city-hero .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, rgba(212, 160, 74, 0.15) 0%, transparent 60%);
+}
+
+/* تأثير الدخول */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.city-hero-content h2 { animation: fadeInUp 0.8s ease 0.1s both; }
+.city-hero-content .subtitle { animation: fadeInUp 0.8s ease 0.2s both; }
+.city-tags { animation: fadeInUp 0.8s ease 0.3s both; }

@@ -1,0 +1,23 @@
+/* ===== CSS خاص بمدينة نجران ===== */
+
+/* لون مميز لنجران - أحمر طيني دافئ */
+:root {
+    --city-color: #c05a3a;
+    --city-gradient: linear-gradient(135deg, #c05a3a 0%, #a03a1a 100%);
+}
+
+.city-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--city-gradient);
+}
+
+/* تأثير الدخول */
+@keyframes heroSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.city-hero-content { animation: heroSlideUp 0.9s ease forwards; }

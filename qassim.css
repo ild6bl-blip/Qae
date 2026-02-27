@@ -1,0 +1,554 @@
+/* ===== المتغيرات والأساسيات ===== */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+:root {
+    --gold: #c8a96e;
+    --gold-light: #e8c98e;
+    --gold-dark: #a07840;
+    --dark: #0d0d0d;
+    --dark-2: #1a1a1a;
+    --dark-3: #252525;
+    --dark-4: #2e2e2e;
+    --text-light: #f5f0e8;
+    --text-muted: #a0998a;
+    --green: #4a7c59;
+    --green-light: #6aad7e;
+    --white: #ffffff;
+    --shadow: 0 20px 60px rgba(0,0,0,0.4);
+    --radius: 16px;
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--dark);
+    color: var(--text-light);
+    direction: rtl;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== الهيدر ===== */
+.site-header {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    z-index: 1000;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.back-btn svg {
+    width: 18px; height: 18px;
+    transform: rotate(180deg);
+}
+
+.back-btn:hover { color: var(--gold); }
+
+.logo-text h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+.header-spacer { width: 120px; }
+
+/* ===== هيرو المنطقة ===== */
+.region-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, rgba(13,13,13,0.85) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px 0;
+    width: 100%;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.breadcrumb a { color: var(--gold); }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.hero-content h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: rgba(245,240,232,0.7);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero-stat .num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.hero-stat .label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ===== عن المنطقة ===== */
+.about-region {
+    padding: 80px 0;
+    background: var(--dark-2);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(200,169,110,0.1);
+    border: 1px solid rgba(200,169,110,0.25);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.about-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--dark-3);
+    border: 1px solid rgba(200,169,110,0.1);
+    border-radius: 12px;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    border-color: rgba(200,169,110,0.3);
+    transform: translateX(-4px);
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.feature-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ===== قسم المدن ===== */
+.cities-section {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.section-header h3 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.city-card {
+    background: var(--dark-3);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(200,169,110,0.1);
+    transition: var(--transition);
+    display: block;
+}
+
+.city-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(200,169,110,0.35);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.city-img-wrap {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.city-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.city-card:hover .city-img-wrap img {
+    transform: scale(1.08);
+}
+
+.city-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(13,13,13,0.8) 100%);
+}
+
+.city-num {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: rgba(200,169,110,0.5);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.city-info {
+    padding: 24px;
+}
+
+.city-info h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.city-info p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.explore-link {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gold);
+    transition: var(--transition);
+}
+
+.city-card:hover .explore-link {
+    letter-spacing: 0.5px;
+}
+
+/* ===== صفحة المدينة الفردية ===== */
+.city-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.city-hero .hero-bg { position: absolute; inset: 0; }
+.city-hero .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.city-hero .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(13,13,13,0.2) 0%, rgba(13,13,13,0.88) 100%);
+}
+
+.city-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px 0;
+    width: 100%;
+}
+
+.city-hero-content h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.city-hero-content .subtitle {
+    font-size: 1.1rem;
+    color: rgba(245,240,232,0.65);
+    margin-bottom: 32px;
+}
+
+.city-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.city-tag-item {
+    background: rgba(200,169,110,0.15);
+    border: 1px solid rgba(200,169,110,0.3);
+    color: var(--gold);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 50px;
+}
+
+/* ===== محتوى المدينة ===== */
+.city-content {
+    padding: 80px 0;
+    background: var(--dark-2);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.content-main h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+}
+
+.content-main p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.info-card {
+    background: var(--dark-3);
+    border: 1px solid rgba(200,169,110,0.12);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.info-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.88rem;
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-row .label { color: var(--text-muted); }
+.info-row .value { color: var(--text-light); font-weight: 600; }
+
+/* ===== معالم المدينة ===== */
+.landmarks-section {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.landmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.landmark-card {
+    background: var(--dark-3);
+    border: 1px solid rgba(200,169,110,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.landmark-card:hover {
+    border-color: rgba(200,169,110,0.3);
+    transform: translateY(-4px);
+}
+
+.landmark-icon {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.landmark-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.landmark-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ===== الفوتر ===== */
+.page-footer {
+    background: var(--dark-2);
+    border-top: 1px solid rgba(200,169,110,0.1);
+    padding: 32px 0;
+}
+
+.page-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-footer p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.page-footer a {
+    font-size: 0.88rem;
+    color: var(--gold);
+    transition: var(--transition);
+}
+
+.page-footer a:hover { text-decoration: underline; }
+
+/* ===== التجاوب ===== */
+@media (max-width: 900px) {
+    .about-content { grid-template-columns: 1fr; gap: 40px; }
+    .cities-grid { grid-template-columns: 1fr; }
+    .content-grid { grid-template-columns: 1fr; }
+    .landmarks-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .hero-stats { gap: 24px; }
+    .landmarks-grid { grid-template-columns: 1fr; }
+    .page-footer .container { flex-direction: column; gap: 12px; text-align: center; }
+}
